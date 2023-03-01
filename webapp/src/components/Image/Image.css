@@ -1,0 +1,30 @@
+.Image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.Image .pixel {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Image .image-wrapper {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.Image .image {
+  margin: auto;
+  max-height: 100%;
+}
+
+.LootboxCard .Image .image {
+  margin-top: 8%;
+  max-height: 75%;
+}

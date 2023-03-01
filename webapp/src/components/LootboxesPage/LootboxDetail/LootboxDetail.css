@@ -1,0 +1,14 @@
+.lootbox-detail .Row .Column {
+  width: calc(100% - 272px)
+}
+
+.ConfirmNumberOfItemsModal .dcl.field .ui.sub.header {
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .ConfirmNumberOfItemsModal .dcl.field {
+    width: 100%;
+    min-width: auto;
+  }
+}

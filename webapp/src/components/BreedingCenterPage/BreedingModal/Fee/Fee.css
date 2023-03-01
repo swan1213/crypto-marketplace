@@ -1,0 +1,76 @@
+.kryptomon.breeding-modal-fee {
+  display: flex;
+  flex: 1;
+}
+
+.kryptomon.breeding-modal-fee > div {
+  width: 33.33%;
+}
+
+.kryptomon.breeding-modal-fee .my-kryptomon {
+}
+
+.kryptomon.breeding-modal-fee .fee-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 31px;
+}
+
+.kryptomon.breeding-modal-fee .fee-detail .fee-detail-info {
+  text-align: center;
+  font-size: 12px;
+  color: #E7E3D7;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 20px;
+}
+
+.kryptomon.breeding-modal-fee .fee-detail .breed-button {
+  margin: 20px 0 10px 0;
+  background: linear-gradient(#D7B731, #F25F31) !important;
+  color: var(--background) !important;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .kryptomon.breeding-modal-fee {
+    display: block;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee .my-kryptomon {
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee > div {
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee .fee-detail .fee-detail-info {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kryptomon.breeding-modal-fee {
+    display: block;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee .my-kryptomon {
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee > div {
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-fee .fee-detail .fee-detail-info {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}

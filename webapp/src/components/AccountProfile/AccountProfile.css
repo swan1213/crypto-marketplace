@@ -1,0 +1,22 @@
+.AccountProfile {
+  width: 100%;
+  background-color: #323132;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px 30px;
+  margin-top: -24px;
+}
+
+.profile-address-hash-hidden {
+  opacity: 0;
+}
+
+.profile-account-name {
+  font-family: var(--font-family);
+  color: #e7e3d7;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 20px 0px;
+}

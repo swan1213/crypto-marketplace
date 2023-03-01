@@ -1,0 +1,46 @@
+.kryptomon.breeding-modal-probability {
+  margin: 58px 0;
+}
+
+.kryptomon.breeding-modal-probability .value {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0.86px;
+  text-align: center;
+}
+
+.kryptomon.breeding-modal-probability .probability-chart-box {
+  display: flex;
+  justify-content: center;
+}
+
+.kryptomon.breeding-modal-probability .probability-chart-box .probability-chart {
+  margin-top: 20px;
+  width: 60%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .kryptomon.breeding-modal-probability .probability-chart-box .probability-chart {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-probability .value {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kryptomon.breeding-modal-probability .probability-chart-box .probability-chart {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .kryptomon.breeding-modal-probability .value {
+    font-size: 17px;
+  }
+}

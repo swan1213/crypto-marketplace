@@ -1,0 +1,78 @@
+.history-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 738px;
+}
+
+.history-table {
+  background: none !important;
+}
+
+.event-type {
+  padding: 1em 0 !important;
+  text-transform: capitalize;
+}
+
+.history-table > tr {
+  font-size: 10px;
+}
+
+.history-table > tr:first-child {
+  color: #676370;
+}
+
+.history-table > tr > td:first-child {
+  color: #676370;
+}
+
+.date-link {
+  margin-bottom: -3px;
+}
+
+.kmon-coin {
+  margin-bottom: -5px;
+  margin-right: 6px;
+}
+
+.orange-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #ff7c44;
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+.blue-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #3898ff;
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+.white-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+.green-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #33d669;
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+
+.event-icon {
+  margin-bottom: -4px;
+  margin-right: 10px;
+}

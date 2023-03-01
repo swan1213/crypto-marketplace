@@ -1,0 +1,253 @@
+.NFTCard {
+  overflow: hidden;
+}
+
+.NFTCard .header,
+.NFTCard .dcl.mana.inline {
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+.NFTCard .header .title {
+  flex: 1 2 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.ui.card.NFTCard > .content {
+  flex: none;
+}
+
+.ui.card.NFTCard > .content > .header:not(.ui),
+.ui.cards > .card.NFTCard > .content > .header:not(.ui) {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.NFTCard .dcl.mana.inline {
+  margin: 0px;
+  flex: none;
+}
+
+.ui.cards > .ui.card.NFTCard.link .meta,
+.ui.card.link .meta {
+  margin-bottom: 4px;
+}
+
+.ui.cards > .ui.card.NFTCard.link:hover .meta,
+a.ui.card.link:hover .meta {
+  color: var(--secondary-text);
+}
+.ui.cards > .ui.card,
+.ui.card {
+  background-color: #323132 !important;
+  border: none !important;
+}
+.ui.card:hover {
+  border: none !important;
+}
+.NFTCard .tags {
+  margin-top: 12px;
+}
+
+.NFTCard .NFTImage {
+  overflow: hidden;
+}
+
+.NFTCard .NFTImage .ens-subdomain {
+  background-size: 557px;
+  background-position-y: -133px;
+}
+
+.NFTCard .NFTImage .ens-subdomain .monospace {
+  margin-top: 0px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .NFTCard .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .NFTCard .header .title {
+    margin-right: 0;
+  }
+
+  .NFTCard .dcl.mana.inline {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .NFTCard.ui.card > .content,
+  .ui.cards > .NFTCard.card > .content {
+    display: block;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #323132;
+  box-shadow: none;
+  width: 272px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: fit-content;
+  align-self: flex-end;
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.card-footer {
+  background-color: #e7e3d7;
+}
+
+.card-image-container {
+  width: 100%;
+  height: 302px;
+  position: relative;
+}
+
+.card-image {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2e2d2e;
+}
+
+.card-image-text {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 13px 16px;
+}
+
+.card-image-text-details {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 13px 16px;
+}
+
+.product-type-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-image: url(../../images/egg/elem-fire.svg);
+  display: flex;
+  align-self: flex-end;
+}
+
+.product-type-icon-details {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-image: url(../../images/egg/elem-fire.svg);
+  display: flex;
+  align-self: flex-start;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.product-info-value {
+  font-size: 10px;
+  margin: 0;
+}
+.product-info-number {
+  margin: 0 !important;
+  font-size: 17px;
+  margin-bottom: 12px;
+  font-family: var(--font-family);
+  color: #000000;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-verified {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../images/egg/certified-badge.svg);
+  margin: 8px;
+}
+
+.product-title {
+  color: black;
+}
+
+.product-description {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e7e3d7;
+  flex-direction: row;
+  width: 100%;
+  padding: 11px 16px;
+}
+
+.product-description-left {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.product-description-left-item {
+  color: #000000;
+  font-size: 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.product-description-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 8px;
+}
+
+.card-container {
+  width: 272px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.card-image-text-details > .ui.toggle.checkbox input.hidden + label:after {
+  background-color: var(--primary) !important;
+}

@@ -1,0 +1,10 @@
+.lootbox-detail-card .card-image .image-wrapper img {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%) scale(0.9);
+}
+
+.lootbox-detail-card .card-image-text.candy {
+  align-items: flex-end;
+}

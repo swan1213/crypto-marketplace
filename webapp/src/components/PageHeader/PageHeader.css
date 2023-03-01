@@ -1,0 +1,15 @@
+.PageHeader {
+  height: var(--page-header-height);
+  margin-bottom: 35px;
+}
+
+.PageCustomHeader {
+  background-image: url(../../images/kryptomon-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.PageCustomHeader .dcl.tabs {
+  font-family: var(--font-family);
+  margin-top: 50px;
+}

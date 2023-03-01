@@ -1,0 +1,19 @@
+.ui.inverted.primary.button:focus {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.ui.loading.button:after {
+  border-color: var(--primary) transparent transparent;
+}
+
+.ui.button + .ui.button {
+  margin-left: 0px;
+}
+
+.ui.primary.button {
+  background: linear-gradient(#D7319E, #6331F2);
+  border-radius: var(--button-border-radius);
+  font-size: var(--font-size-medium);
+  text-transform: initial;
+}

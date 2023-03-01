@@ -1,0 +1,12 @@
+.elemTypes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 8px;
+}
+
+.clear-filters {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
