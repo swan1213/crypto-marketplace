@@ -1,0 +1,279 @@
+# ---------------------------------------------------------
+# Counts --------------------------------------------------
+# ---------------------------------------------------------
+
+# thegraph doesn't support count operations, but we need them to paginate results
+# This entity is a workaround to this issue, but it's still not enough, as we'd need counts for more complex queries
+type Count @entity {
+  id: ID!
+
+  orderTotal: Int!
+  orderKryptomon: Int!
+
+  kryptomonTotal: Int!
+  started: Int!
+}
+
+# ---------------------------------------------------------
+# Orders --------------------------------------------------
+# ---------------------------------------------------------
+
+# thegraph doesn't support nested property searches, so we're doing promoting properties
+# we need from each NFT type to the Order, in order to search for them, prefixing them with search_[nft]_[prop]
+type Order @entity {
+  id: ID!
+  category: Category!
+  nft: NFT
+  nftAddress: Bytes!
+  tokenId: BigInt!
+  txHash: Bytes!
+  owner: Bytes!
+  buyer: Bytes
+  price: BigInt!
+  paymentToken: Bytes!
+  status: OrderStatus!
+  blockNumber: BigInt!
+  expiresAt: BigInt!
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
+
+# ---------------------------------------------------------
+# Bids ----------------------------------------------------
+# ---------------------------------------------------------
+
+type Bid @entity {
+  id: ID!
+  category: Category!
+  nft: NFT
+  nftAddress: Bytes!
+  tokenId: BigInt!
+  bidder: Bytes
+  seller: Bytes
+  price: BigInt!
+  paymentToken: Bytes!
+  fingerprint: Bytes
+  status: OrderStatus!
+  blockchainId: String!
+  blockNumber: BigInt!
+  expiresAt: BigInt!
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
+
+# ---------------------------------------------------------
+# NFTs ----------------------------------------------------
+# ---------------------------------------------------------
+
+type Kryptomon @entity {
+  id: ID!
+  tokenId: BigInt!
+  owner: Account!
+  isHatched: Boolean
+  matronId: BigInt
+  sireId: BigInt
+  status: BigInt 
+  timeBorn: BigInt
+  timeHatched: BigInt
+  extraData: KryptomonExtraData
+  genes: KryptomonGenes
+  elementType: String
+  elementTalent: BigInt!
+  elementPercentage: BigInt!
+  elementTypeSecond: String
+  elementTalentSecond: BigInt!
+  elementPercentageSecond: BigInt!
+  speciality: String
+  breedingsLeft: BigInt
+  breedingCount: BigInt
+  totalBreedingCount: BigInt
+  timeCanBreed: BigInt
+  lastTimeBred: BigInt
+  lastEvolved: BigInt
+  lastInteracted: BigInt
+  interactionCount: BigInt
+  maxBreedingsDuringLifePhase: BigInt
+  nft: NFT @derivedFrom(field: "kryptomon")
+  breedingOrder: BreedingOrder @derivedFrom(field: "kryptomon")
+}
+
+type BreedingOrder @entity {
+  id: ID!
+  kryptomon: Kryptomon
+  kryptomonAddress: Bytes!
+  tokenId: BigInt!
+  txHash: Bytes!
+  breeder: Account!
+  price: BigInt!
+  status: OrderStatus!
+  blockNumber: BigInt!
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
+
+type KryptomonGenes @entity {
+  id: ID!
+  fire: BigInt!
+  fireTalent: BigInt!
+  water: BigInt!
+  waterTalent: BigInt!
+  ice: BigInt!
+  iceTalent: BigInt!
+  ground: BigInt!
+  groundTalent: BigInt!
+  air: BigInt!
+  airTalent: BigInt!
+  electro: BigInt!
+  electroTalent: BigInt!
+  ghost: BigInt!
+  ghostTalent: BigInt!
+  grass: BigInt!
+  grassTalent: BigInt!
+  color: BigInt!
+  sex: BigInt!
+  generalTalent: BigInt!
+  attack: BigInt!
+  defense: BigInt!
+  special: BigInt!
+  xFactor: BigInt!
+  growthTalentFactor: BigInt!
+  constitution: BigInt!
+  healthPoints: BigInt!
+  speed: BigInt!
+  affections: BigInt!
+  crazyness: BigInt!
+  instinct: BigInt!
+  hunger: BigInt!
+  laziness: BigInt!
+  brave: BigInt!
+  smart: BigInt!
+  bodySize: BigInt!
+  ego: BigInt!
+  skinType: BigInt!
+  generation: BigInt!
+}
+
+type BreedingCentre @entity {
+  id: ID!
+  breedingFee: BigInt!
+  kryptomonTotal: Int!
+}
+
+type KryptomonExtraData @entity {
+  id: ID!
+  unfreezable: BigInt
+}
+
+type NFT @entity {
+  id: ID!
+  tokenId: BigInt!
+  contractAddress: Bytes!
+  category: Category!
+  owner: Account!
+  tokenURI: String
+
+  orders: [Order!] @derivedFrom(field: "nft") # History of all orders. Should only ever be ONE open order. all others must be cancelled or sold
+  bids: [Bid!] @derivedFrom(field: "nft") # History of all bids.
+  activeOrder: Order
+  activeBreedingOrder: BreedingOrder
+
+  name: String
+  image: String
+
+  kryptomon: Kryptomon
+
+  createdAt: BigInt!
+  updatedAt: BigInt!
+
+  # search indexes
+  searchOrderStatus: OrderStatus
+  searchOrderPrice: BigInt
+  searchOrderPaymentToken: Bytes
+  searchOrderExpiresAt: BigInt
+  searchOrderCreatedAt: BigInt
+
+  searchText: String
+
+  searchIsConsumable: Boolean
+  searchKryptomonGenesGeneration: BigInt
+  searchKryptomonStatus: BigInt
+  searchKryptomonSpeciality: String
+  searchKryptomonElementPercentage: BigInt
+  searchKryptomonElementType: String
+  searchKryptomonElementTalent: BigInt
+  searchKryptomonElementPercentageSecond: BigInt
+  searchKryptomonElementTypeSecond: String
+  searchKryptomonElementTalentSecond: BigInt
+  searchKryptomonFire: BigInt
+  searchKryptomonFireTalent: BigInt
+  searchKryptomonWater: BigInt
+  searchKryptomonWaterTalent: BigInt
+  searchKryptomonIce: BigInt
+  searchKryptomonIceTalent: BigInt
+  searchKryptomonGround: BigInt
+  searchKryptomonGroundTalent: BigInt
+  searchKryptomonAir: BigInt
+  searchKryptomonAirTalent: BigInt
+  searchKryptomonElectro: BigInt
+  searchKryptomonElectroTalent: BigInt
+  searchKryptomonGhost: BigInt
+  searchKryptomonGhostTalent: BigInt
+  searchKryptomonGrass: BigInt
+  searchKryptomonGrassTalent: BigInt
+  searchKryptomonColor: BigInt
+  searchKryptomonSex: BigInt
+  searchKryptomonGeneralTalent: BigInt
+  searchKryptomonAttack: BigInt
+  searchKryptomonDefense: BigInt
+  searchKryptomonSpecial: BigInt
+  searchKryptomonXFactor: BigInt
+  searchKryptomonGrowthTalentFactor: BigInt
+  searchKryptomonConstitution: BigInt
+  searchKryptomonHealthPoints: BigInt
+  searchKryptomonSpeed: BigInt
+  searchKryptomonAffections: BigInt
+  searchKryptomonCrazyness: BigInt
+  searchKryptomonInstinct: BigInt
+  searchKryptomonHunger: BigInt
+  searchKryptomonLaziness: BigInt
+  searchKryptomonBrave: BigInt
+  searchKryptomonSmart: BigInt
+  searchKryptomonBodySize: BigInt
+  searchKryptomonEgo: BigInt
+  searchKryptomonSkinType: BigInt
+  searchKryptomonUnfreezable: BigInt
+  searchIsKryptomonV2: Boolean
+
+  # search indexes
+  searchBreedingOrderStatus: OrderStatus
+  searchBreedingOrderPrice: BigInt
+  searchBreedingOrderCreatedAt: BigInt
+  searchTimeCanBreed: BigInt
+}
+
+# ---------------------------------------------------------
+# Account (user) -------------------------------------------
+# ---------------------------------------------------------
+
+type Account @entity {
+  id: ID! # ETH addr
+  address: Bytes!
+  nfts: [NFT!] @derivedFrom(field: "owner")
+  kmon: BigInt # Amount of mana owned
+}
+
+# ---------------------------------------------------------
+# Enums ---------------------------------------------------
+# ---------------------------------------------------------
+
+enum Category @entity {
+  kryptomon
+  consumeable
+  nonConsumeable
+}
+
+enum OrderStatus @entity {
+  open
+  sold
+  cancelled
+}

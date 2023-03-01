@@ -1,0 +1,7 @@
+.justify-center {
+  justify-content: center !important;
+}
+
+.IndexingDelayCard .card-image-text {
+  color: var(--text);
+}

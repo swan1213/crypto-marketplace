@@ -1,0 +1,63 @@
+{
+  "outputPath": "./src/contracts",
+  "contracts": {
+    "MANA": {
+      "source": "etherscan",
+      "net": "mainnet",
+      "address": "0x0f5d2fb29fb7d3cfee444a200298f468908cc942"
+    },
+    "MarketplaceAdapter": {
+      "source": "etherscan",
+      "net": "mainnet",
+      "address": "0xd1e4e2880ff56cd0d5c68da9bed58bfbf0150948"
+    },
+    "Converter": {
+      "source": "etherscan",
+      "net": "ropsten",
+      "address": "0x2782eb28Dcb1eF4E7632273cd4e347e130Ce4646"
+    },
+    "Bids": {
+      "source": "etherscan",
+      "net": "mainnet",
+      "address": "0xe479dfd9664c693b2e2992300930b00bfde08233"
+    },
+    "EstateRegistry": {
+      "source": "etherscan",
+      "net": "mainnet",
+      "address": "0x55fd705b431f95c8e09fcf85a245377568cc2c6e"
+    },
+    "ERC20": {
+      "source": "files",
+      "abiFile": "./src/contracts/ERC20.json"
+    },
+    "ERC721": {
+      "source": "files",
+      "abiFile": "./src/contracts/ERC721.json"
+    },
+    "KMONToken": {
+      "source": "etherscan",
+      "net": "rinkeby",
+      "address": "0x2c2bcce26a6f78728d4282aac9609c18206b375b"
+    },
+    "WBNB": {
+      "source": "etherscan",
+      "net": "rinkeby",
+      "address": "0x08a68ba353e4af7c74b3b89d5340e5b2ddc5093c"
+    },
+    "Item": {
+      "source": "etherscan",
+      "net": "rinkeby",
+      "address": "0x7f78802359fe3df26c2153154baf27b5b6cba54f"
+    },
+    "ERC721Bid": {
+      "source": "etherscan",
+      "net": "rinkeby",
+      "address": "0x4ACACC0991bE68C51c8261Ee81C204a40856c8D4"
+    },
+    "Marketplace": {
+      "source": "etherscan",
+      "net": "rinkeby",
+      "address": "0xD0C48e63C27CbFdF6b09F2c3aFD8C9D8a5A51D59"
+    }
+  }
+}

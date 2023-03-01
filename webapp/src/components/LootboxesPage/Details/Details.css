@@ -1,0 +1,7 @@
+.LootboxDetails.grid-container {
+  display: grid;
+  grid-template-areas:
+    'type item item'
+    'type item item';
+  grid-gap: 8px;
+}

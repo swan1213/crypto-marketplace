@@ -1,0 +1,61 @@
+.dna-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 45px 20px 15px;
+  background-color: #323132;
+  border-radius: 8px;
+  position: relative;
+}
+
+.dna-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dna-info-generation {
+  padding: 0.5px 10px;
+  background-color: #39c876;
+  border-radius: 10px;
+  font-size: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: #232123;
+}
+
+.dna-info-start {
+  margin-left: 9px;
+}
+
+#chartjs-tooltip {
+  color: #232123;
+  font-family: Poppins;
+  background-color: #39c876;
+  border-radius: 14px;
+  position: absolute;
+  padding: 0px 10px;
+  pointer-events: none;
+}
+
+#chartjs-tooltip::after {
+  content: ' ';
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #39c876 transparent transparent transparent;
+}
+
+#chartjs-line {
+  position: absolute;
+  background-image: linear-gradient(#f231af 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 1px 10px;
+  background-repeat: repeat-y;
+}

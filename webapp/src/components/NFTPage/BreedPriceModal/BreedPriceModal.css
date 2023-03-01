@@ -1,0 +1,16 @@
+.BreedPriceModal .cancel_listing_button {
+  background: linear-gradient(#D7B731, #F25F31) !important;
+  color: var(--background)
+}
+
+.BreedPriceModal .cancel_listing_button.ui.primary.button {
+  color: var(--background)
+}
+
+.BreedPriceModal .cancel_listing_button.disabled {
+  color: #fff;
+}
+
+.BreedPriceModal .cancel_listing_button.ui.primary.button.disabled {
+  color: #fff;
+}

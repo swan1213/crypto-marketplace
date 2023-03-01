@@ -1,0 +1,75 @@
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 16px;
+}
+
+@media (max-width: 768px) {
+  .checkboxes {
+    padding-left: 0px;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  flex: 50%;
+  margin: 4px 0;
+}
+
+.icon {
+  visibility: visible;
+  line-height: normal;
+}
+
+.hidden-icon {
+  visibility: hidden;
+}
+
+.checkbox-passive {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 1px solid #f231af;
+  border-radius: 3px;
+  transition: all 150ms;
+  padding: 2px;
+  margin-right: 8px;
+}
+
+.checkbox-active {
+  background: #f231af;
+  position: relative;
+}
+.checkbox-active::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  visibility: hidden;
+  animation: antCheckboxEffect 300ms ease-in-out;
+  animation-fill-mode: backwards;
+  content: '';
+}
+
+.label {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+@keyframes antCheckboxEffect {
+  0% {
+    transform: scale(1.1);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,86 @@
+.dcl.navbar .ui.menu .item.item {
+    font-size: 20px;
+}
+
+.dcl.navbar-logo.navbar-logo {
+    margin-top: 4px;
+}
+
+.dcl.navbar .ui.menu .item .bell {
+    color: var(--text);
+}
+
+.dcl.navbar .ui.menu .item.active .bell {
+    color: var(--primary);
+}
+
+.dcl.navbar .ui.menu .item .bell.pending:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary);
+    position: absolute;
+    border-radius: 100%;
+    top: -5px;
+    right: -5px;
+}
+
+.dcl.account-wrapper .dcl.mana {
+    flex: none;
+}
+
+.dcl.navbar .ui.menu .item.sign-in-button {
+    transform: translateY(-8px);
+}
+
+.dcl.navbar .ui.menu .item.sign-in-button,
+.dcl.navbar .ui.menu .item.sign-in-button:hover,
+.dcl.navbar .ui.menu .item.sign-in-button:active,
+.dcl.navbar .ui.menu .item.sign-in-button:focus {
+    background: linear-gradient(#D7B731, #F25F31);
+    border-radius: var(--button-border-radius);
+    color: var(--background);
+    justify-content: center;
+    height: var(--button-height);
+    font-size: var(--font-size-medium);
+    text-transform: initial;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    width: var(--button-width);
+}
+
+.dcl.navbar .ui.menu .item.sign-in-button:hover {
+    transform: translateY(-10px);
+}
+
+.dcl.navbar .ui.menu.secondary {
+    transform: translateY(28px);
+}
+
+@media (max-width: 768px) {
+    .kryptomon.logo  {
+        margin-right: 20px !important;
+        width: 82px !important;
+        height: 32px !important;
+        background-repeat: no-repeat;
+    }
+
+    .dcl.navbar .navbar-mobile-menu .ui.header {
+        margin-left: 60px !important;
+    }
+
+    .dcl.navbar .mobile-menu {
+        padding-left: 70px !important;
+    }
+
+    .dcl.navbar .mobile-menu .item {
+        padding-top: 0px !important;
+        padding-bottom: 10px !important;
+        padding-left: 20px !important;
+    }
+
+    .marketplace-sub-logo {
+        display: block !important;
+        width: 58px !important;
+        height: 28px !important;
+    }
+}

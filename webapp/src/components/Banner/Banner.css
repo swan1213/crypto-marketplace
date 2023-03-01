@@ -1,0 +1,10 @@
+.Banner {
+  background: #6331f2;
+}
+.Banner .ui.container {
+  padding: 6px 0 5px;
+}
+.Banner .indexing-delay {
+  font-weight: 600;
+  font-family: var(--font-family);
+}

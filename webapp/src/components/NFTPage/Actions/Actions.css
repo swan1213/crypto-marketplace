@@ -1,0 +1,8 @@
+.ml-15 {
+  margin-left: 15px;
+}
+
+.update-button {
+  background: linear-gradient(#D7B731, #F25F31) !important;
+  color: var(--background) !important
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic-open-in-new-24px</title>
+    <g id="Marketplace-Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Detail" transform="translate(-1186.000000, -1226.000000)" fill="#676370" fill-rule="nonzero">
+            <g id="ic-open-in-new-24px" transform="translate(1186.000000, 1226.000000)">
+                <path d="M10.6666667,10.6666667 L1.33333333,10.6666667 L1.33333333,1.33333333 L6,1.33333333 L6,0 L1.33333333,0 C0.593333333,0 0,0.6 0,1.33333333 L0,10.6666667 C0,11.4 0.593333333,12 1.33333333,12 L10.6666667,12 C11.4,12 12,11.4 12,10.6666667 L12,6 L10.6666667,6 L10.6666667,10.6666667 Z M7.33333333,0 L7.33333333,1.33333333 L9.72666667,1.33333333 L3.17333333,7.88666667 L4.11333333,8.82666667 L10.6666667,2.27333333 L10.6666667,4.66666667 L12,4.66666667 L12,0 L7.33333333,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

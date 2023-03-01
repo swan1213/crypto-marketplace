@@ -1,0 +1,21 @@
+.block-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 17px;
+  margin: 20px 0;
+}
